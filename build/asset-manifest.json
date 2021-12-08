@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/argon-dashboard-react-master/static/css/main.e111db6f.chunk.css",
+    "main.js": "/argon-dashboard-react-master/static/js/main.0745f5c2.chunk.js",
+    "main.js.map": "/argon-dashboard-react-master/static/js/main.0745f5c2.chunk.js.map",
+    "runtime-main.js": "/argon-dashboard-react-master/static/js/runtime-main.1433d479.js",
+    "runtime-main.js.map": "/argon-dashboard-react-master/static/js/runtime-main.1433d479.js.map",
+    "static/css/2.bcecc28e.chunk.css": "/argon-dashboard-react-master/static/css/2.bcecc28e.chunk.css",
+    "static/js/2.1f8c31ff.chunk.js": "/argon-dashboard-react-master/static/js/2.1f8c31ff.chunk.js",
+    "static/js/2.1f8c31ff.chunk.js.map": "/argon-dashboard-react-master/static/js/2.1f8c31ff.chunk.js.map",
+    "index.html": "/argon-dashboard-react-master/index.html",
+    "static/css/2.bcecc28e.chunk.css.map": "/argon-dashboard-react-master/static/css/2.bcecc28e.chunk.css.map",
+    "static/css/main.e111db6f.chunk.css.map": "/argon-dashboard-react-master/static/css/main.e111db6f.chunk.css.map",
+    "static/js/2.1f8c31ff.chunk.js.LICENSE.txt": "/argon-dashboard-react-master/static/js/2.1f8c31ff.chunk.js.LICENSE.txt",
+    "static/js/main.0745f5c2.chunk.js.LICENSE.txt": "/argon-dashboard-react-master/static/js/main.0745f5c2.chunk.js.LICENSE.txt",
+    "static/media/angular.jpg": "/argon-dashboard-react-master/static/media/angular.b5045666.jpg",
+    "static/media/argon-react-white.png": "/argon-dashboard-react-master/static/media/argon-react-white.e4dd3b41.png",
+    "static/media/argon-react.png": "/argon-dashboard-react-master/static/media/argon-react.128d71d3.png",
+    "static/media/bootstrap.jpg": "/argon-dashboard-react-master/static/media/bootstrap.bd712487.jpg",
+    "static/media/all.min.css": "/argon-dashboard-react-master/static/media/fa-solid-900.efbd5d20.eot",
+    "static/media/github.svg": "/argon-dashboard-react-master/static/media/github.6c955556.svg",
+    "static/media/google.svg": "/argon-dashboard-react-master/static/media/google.eae9aa93.svg",
+    "static/media/nucleo.css": "/argon-dashboard-react-master/static/media/nucleo-icons.d6a66724.ttf",
+    "static/media/profile-cover.jpg": "/argon-dashboard-react-master/static/media/profile-cover.97899245.jpg",
+    "static/media/react.jpg": "/argon-dashboard-react-master/static/media/react.0e8c9066.jpg",
+    "static/media/sketch.jpg": "/argon-dashboard-react-master/static/media/sketch.a6af780a.jpg",
+    "static/media/team-1-800x800.jpg": "/argon-dashboard-react-master/static/media/team-1-800x800.fa5a7ac2.jpg",
+    "static/media/team-2-800x800.jpg": "/argon-dashboard-react-master/static/media/team-2-800x800.3e08ef14.jpg",
+    "static/media/team-3-800x800.jpg": "/argon-dashboard-react-master/static/media/team-3-800x800.70911cdd.jpg",
+    "static/media/team-4-800x800.jpg": "/argon-dashboard-react-master/static/media/team-4-800x800.99c612eb.jpg",
+    "static/media/vue.jpg": "/argon-dashboard-react-master/static/media/vue.43bd93a8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1433d479.js",
+    "static/css/2.bcecc28e.chunk.css",
+    "static/js/2.1f8c31ff.chunk.js",
+    "static/css/main.e111db6f.chunk.css",
+    "static/js/main.0745f5c2.chunk.js"
+  ]
+}
