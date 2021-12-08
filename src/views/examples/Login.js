@@ -16,6 +16,10 @@
 
 */
 
+import { useState, useRef } from "react";
+import { useHistory } from "react-router-dom";
+import AuthenticationService from "services/AuthenticationService";
+
 // reactstrap components
 import {
   Button,
@@ -30,9 +34,44 @@ import {
   InputGroup,
   Row,
   Col,
+  FormFeedback
 } from "reactstrap";
 
+function useFormInput(initialValue, validate) {
+  const [value, setValue] = useState(initialValue);
+  const valid = validate(value) || value == "";
+
+  return { value: value, setValue: setValue, valid: valid };
+}
+
 const Login = () => {
+  const history = useHistory();
+  const authenticationService = useRef(new AuthenticationService()).current;
+
+  const [loading, setLoading] = useState(false);
+
+  const email = useFormInput("", (value) => value.length >= 5);
+  const password = useFormInput("", (value) => value.length >= 5);
+
+  const [loginFeedback, setLoginFeedback] = useState(undefined);
+
+  const onLoginButtonClicked = async (ev) => {
+    setLoading(true);
+
+    try {
+      await authenticationService.login(email.value, password.value);
+    }
+    catch(e) {
+      console.log(e.toString());
+      setLoading(false);
+      setLoginFeedback("Login failed");
+      return;
+    }
+
+    
+    history.push("/authentication_success");
+  };
+
   return (
     <>
       <Col lg="5" md="7">
@@ -91,10 +130,13 @@ const Login = () => {
                     </InputGroupText>
                   </InputGroupAddon>
                   <Input
-                    placeholder="Email"
-                    type="email"
-                    autoComplete="new-email"
+                    placeholder="Email" type="email" autoComplete="new-email"
+                    value={email.value}
+                    onChange={(ev) => email.setValue(ev.currentTarget.value)}
+                    valid={email.valid} invalid={!email.valid}
                   />
+
+                  <FormFeedback invalid={true}>Email is not valid.</FormFeedback>
                 </InputGroup>
               </FormGroup>
               <FormGroup>
@@ -108,7 +150,13 @@ const Login = () => {
                     placeholder="Password"
                     type="password"
                     autoComplete="new-password"
+                    value={password.value}
+                    valid={password.valid}
+                    invalid={!password.valid}
+                    onChange={(ev) => password.setValue(ev.currentTarget.value)}                    
                   />
+
+                  <FormFeedback invalid={true}>Password is not valid.</FormFeedback>
                 </InputGroup>
               </FormGroup>
               <div className="custom-control custom-control-alternative custom-checkbox">
@@ -125,9 +173,11 @@ const Login = () => {
                 </label>
               </div>
               <div className="text-center">
-                <Button className="my-4" color="primary" type="button">
-                  Sign in
+              <Button className="mt-4" color="primary" type="button" onClick={onLoginButtonClicked} disabled={loading}>
+                  {(loading) ? "Loading..." : "Sign in"}
                 </Button>
+
+                <p style={{color: "red"}}>{loginFeedback}</p>
               </div>
             </Form>
           </CardBody>

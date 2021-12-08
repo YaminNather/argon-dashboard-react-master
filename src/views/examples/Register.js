@@ -36,7 +36,6 @@ import {
 import { useRef, useState } from "react";
 import AuthenticationService from "services/AuthenticationService";
 import { useHistory } from "react-router-dom";
-import { isEmpty } from "@firebase/util";
 
 
 function useFormInput(initialValue, validate) {
@@ -154,7 +153,7 @@ const Register = () => {
                     value={email.value}
                     onChange={(ev) => email.setValue(ev.currentTarget.value)}
                     valid={email.valid} invalid={!email.valid}
-                  />                  
+                  />
 
                   <FormFeedback invalid={true}>Email is not valid.</FormFeedback>
                 </InputGroup>
