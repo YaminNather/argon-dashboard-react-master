@@ -1,4 +1,5 @@
 {
+  "homepage": "http://YaminNather.github.io/argon-dashboard-react-master",
   "name": "argon-dashboard-react",
   "version": "1.2.1",
   "description": "React version of Argon Dashboard by Creative Tim",
@@ -22,8 +23,9 @@
   "bugs": {
     "url": "https://github.com/creativetimofficial/argon-dashboard-react/issues"
   },
-  "homepage": "https://demos.creative-tim.com/argon-dashboard-react/",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -50,6 +52,7 @@
     "chart.js": "2.9.4",
     "classnames": "2.3.1",
     "firebase": "^9.6.0",
+    "gh-pages": "^3.2.3",
     "moment": "2.29.1",
     "node-sass": "6.0.1",
     "node-sass-package-importer": "5.3.2",
