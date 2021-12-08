@@ -50,7 +50,7 @@ const Login = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const email = useFormInput("", (value) => value.length >= 5);
+  const email = useFormInput("", (value) => authenticationService.isEmailValid(value));
   const password = useFormInput("", (value) => value.length >= 5);
 
   const [loginFeedback, setLoginFeedback] = useState(undefined);

@@ -52,7 +52,7 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
 
   const name = useFormInput("", (value) => value.length >= 5);
-  const email = useFormInput("", (value) => value.length >= 5);
+  const email = useFormInput("", (value) => authenticationService.isEmailValid(value));
   const password = useFormInput("", (value) => value.length >= 5);
 
   const [createAccountFeedback, setCreateAccountFeedback] = useState(undefined);
